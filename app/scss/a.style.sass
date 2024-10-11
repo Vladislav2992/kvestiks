@@ -1,0 +1,67 @@
+@import 'vars'
+html
+    scroll-behavior: smooth
+    scrollbar-gutter: stable
+
+body 
+    overflow-x: clip
+    position: relative
+    font-family: 'OpenSans', sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: $main
+    background: $bg
+    @media(max-width:1080px)
+        padding-bottom: 80px
+.container
+    max-width: 1136px
+    margin: 0 auto
+    padding: 0 10px
+a
+    color: inherit
+    text-transform: none
+
+.breadcrumbs
+    font-size: 14px
+    display: flex
+    gap: 10px
+    margin-bottom: 33px
+    margin-top: 24px
+    @media(max-width:780px)
+        display: none
+.section__title
+    font-size: clamp(24px, 3vw, 28px)
+    font-weight: 900
+.product-page
+    display: grid
+    grid-template-columns: 3.2fr 1fr
+    gap: 24px
+    &__inner
+        min-width: 0
+    @media(max-width: 1080px)
+        grid-template-columns: 1fr
+.tag
+    padding: 6px 12px
+    width: fit-content
+    border-radius: 3px
+    color: $gray
+    background: rgba(28, 28, 28, .05)
+    font-size: 14px
+    font-weight: 600
+.btn
+    max-width: 437px
+    width: 100%
+    text-align: center
+    border: none
+    border-radius: 8px
+    background: $accent
+    color: $white
+    font-weight: 700
+    font-family: inherit
+    font-size: 16px
+    padding: 16px 24px
+    transition: background .3s
+    display: block
+    &:hover 
+        background: $accent-hover
+        color: $white
